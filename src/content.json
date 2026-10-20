@@ -1,0 +1,124 @@
+{
+  "name": "Xuge Guo",
+  "email": "xg2472@columbia.edu",
+  "github": "https://github.com/xuge-guo",
+  "linkedin": "https://www.linkedin.com/in/xuge-guo-423791382/",
+  "scholar": "",
+  "cv_file": "assets/xuge-guo-cv.pdf",
+  "portrait_file": "assets/xuge-guo.jpg",
+  "expected_graduation": "May 2027",
+  "bio": "I am an M.S. student in Mechanical Engineering at Columbia University, focusing on robotics and control. My research spans robot learning, robust manipulation, and perception-guided assistance, with an emphasis on connecting pretrained models to reliable robot execution.",
+  "research_interests": [
+    "Robot Learning",
+    "Vision-Language-Action Models",
+    "Robust Robotic Manipulation",
+    "Embodied AI",
+    "Memory-Augmented Policies",
+    "3D Spatial Reasoning"
+  ],
+  "education": [
+    {
+      "title": "Columbia University",
+      "location": "New York, NY",
+      "degree": "M.S. in Mechanical Engineering · Robotics & Control",
+      "start": "Sep 2025",
+      "expected_graduation": true,
+      "details": "Selected coursework: Reinforcement Learning; Model Predictive Control; Robotics Studio (A+)."
+    },
+    {
+      "title": "Wuhan University of Science and Technology",
+      "location": "Wuhan, China",
+      "degree": "B.Eng. in Traffic Engineering",
+      "dates": "Jun 2024"
+    }
+  ],
+  "research_experience": [
+    {
+      "title": "DynaInterfere-Bench: Robotic Manipulation under Dynamic Interference",
+      "dates": "2026–Present",
+      "role": "Research collaboration with Dr. Kaichen Zhou (Massachusetts Institute of Technology) and Prof. Fangneng Zhan (Hong Kong University of Science and Technology)",
+      "summary": "Controlled benchmarking of vision-language-action (VLA) policies, baseline evaluation, and training-free recovery under dynamic interference.",
+      "bullets": [
+        "Co-developed an Isaac Sim / Isaac Lab benchmark with six YAM Ultra2 manipulation tasks, randomized layouts, collision-aware expert planning, and configurable visual occlusion and periodic or reactive obstacles.",
+        "Contributed to 2,000 successful demonstrations (800 xArm5; 1,200 Ultra2), including dual-camera capture, image–state–action synchronization checks, separate train/test seeds, and LeRobot exports.",
+        "Integrated π0.5 and X-VLA action adapters; contributed to four-epoch, full-parameter X-VLA fine-tuning on four RTX 5090 GPUs, including checkpoint validation and recovery.",
+        "Evaluated fine-tuned π0.5 and X-VLA in 400 seed-matched xArm5 trials per model. Baseline success was 83.75% and 99.75%, respectively, under a shared 90-second task-and-return-home protocol.",
+        "Integrated Astra and Sol into an RGB-based robot control pipeline with structured Cartesian and gripper commands, inverse kinematics, and execution feedback. Validated bounded motion with Astra and exploratory mug pick-and-place with Sol without task-specific fine-tuning.",
+        "Prototyped a model-agnostic, training-free runtime adapter for risk monitoring, braking, avoidance, and trajectory rejoining, with an initial 12-pair on/off study (24 rollouts). Exploring temporal memory and multi-view 3D context for robustness to occlusion."
+      ]
+    },
+    {
+      "title": "Halo Copilot / SmartHat",
+      "dates": "Feb 2026–Present",
+      "role": "Graduate Researcher · Creative Machines Lab, Columbia University · Advised by Prof. Hod Lipson",
+      "summary": "A wearable assembly assistant combining RGB-D perception, spatially aligned projection, and multimodal step assessment.",
+      "bullets": [
+        "Developed a wearable camera–projector system on Jetson Orin Nano with Intel RealSense D435i sensing to provide guidance on physical workspaces.",
+        "Combined 13-class YOLO part detection with Lucas–Kanade optical flow and adaptive detection scheduling for continuous localization during assembly.",
+        "Implemented depth-plane estimation, calibrated camera-to-projector mapping, and confidence-aware rendering to keep projected guidance aligned as viewpoints change.",
+        "Integrated GPT-6.1-sol for multimodal step-completion assessment against an eight-step XML-defined assembly plan; investigating diagnosis of missing or incorrectly installed parts."
+      ]
+    },
+    {
+      "title": "Training-Free Asynchronous Control for World-Action Models",
+      "role": "World Assembly",
+      "summary": "Execution-aware inference and asynchronous control for pretrained FastWAM policies.",
+      "bullets": [
+        "Developed training-free asynchronous control extensions combining continuous policy inference, execution-progress-aware action alignment, and hold-aware action stitching.",
+        "Implemented multiprocess simulation and inference backends with dedicated GPU allocation, Pipe-based interprocess communication, reduced observation payloads, and per-stage latency profiling.",
+        "Conducted RoboTwin baseline and ablation evaluations across 12 manipulation tasks, with 30 rollouts per method (720 total evaluation rollouts)."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "8-DOF Quadruped Robot",
+      "role": "Columbia University · Robotics Studio",
+      "bullets": [
+        "Designed and built an 8-DOF quadruped using LX-16A smart servos and Raspberry Pi 4B, integrating mechanical design, inverse kinematics, gait generation, embedded actuation, and physical-robot testing.",
+        "Developed a MuJoCo simulation and trained locomotion policies with PPO; compared learned control with manually designed gaits and investigated practical sim-to-real transfer issues."
+      ]
+    },
+    {
+      "title": "Vision-Based Mobile Robot",
+      "dates": "2025",
+      "role": "MakeCU Hackathon · Columbia University",
+      "award": "Best Use of Computer Vision",
+      "bullets": [
+        "Built a two-wheel mobile robot with real-time vision-based target tracking during the MakeCU hackathon."
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "title": "Teaching Assistant · MECE 4611 Robotics Studio",
+      "dates": "Fall 2026",
+      "role": "Columbia University",
+      "bullets": [
+        "Mentor student teams on robot hardware integration, servo systems, Raspberry Pi-based control, mechanical design, and system debugging; hold weekly office hours and support project evaluation."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming",
+      "items": "Python; Git; Linux; Bash; NumPy"
+    },
+    {
+      "category": "Robot learning & simulation",
+      "items": "PyTorch; Isaac Sim; Isaac Lab; ManiSkill3; MuJoCo; reinforcement learning; PPO; OpenPI; LeRobot"
+    },
+    {
+      "category": "Perception",
+      "items": "OpenCV; YOLO; RGB-D perception; optical flow; ArUco; camera calibration; RANSAC"
+    },
+    {
+      "category": "Robotics & hardware",
+      "items": "Jetson Orin Nano; Raspberry Pi; Intel RealSense; smart-servo systems"
+    },
+    {
+      "category": "Mechanical design",
+      "items": "SolidWorks; Fusion 360; CAD and rapid prototyping"
+    }
+  ]
+}

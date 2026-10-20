@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I am an M.S. student in Mechanical Engineering at Columbia University, focusing on robotics and control. My research spans robot learning, robust manipulation, and perception-guided assistance, with an emphasis on connecting pretrained models to reliable robot execution.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Xuge Guo — Robotics &amp; Control</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <main class="resume" id="content">
+    <header class="profile-header">
+      <img class="portrait" src="assets/xuge-guo.jpg" alt="Portrait of Xuge Guo" width="112" height="112" decoding="async">
+      <div class="profile-main">
+        <h1>Xuge Guo</h1>
+        <p class="position">M.S. Mechanical Engineering · Robotics &amp; Control<br>Columbia University SEAS · Expected May 2027</p>
+        <span class="contact-links"><a href="mailto:xg2472@columbia.edu">xg2472@columbia.edu</a><span aria-hidden="true">·</span><a href="https://github.com/xuge-guo" target="_blank" rel="noopener noreferrer">GitHub</a><span aria-hidden="true">·</span><a href="https://www.linkedin.com/in/xuge-guo-423791382/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+      </div>
+      <div class="header-cv"><a class="cv-link" href="assets/xuge-guo-cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div>
+    </header>
+    <p class="profile-bio">I am an M.S. student in Mechanical Engineering at Columbia University, focusing on robotics and control. My research spans robot learning, robust manipulation, and perception-guided assistance, with an emphasis on connecting pretrained models to reliable robot execution.</p>
+    <nav class="section-nav" aria-label="Page sections">
+      <a href="#research">Interests</a><a href="#experience">Research</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#teaching">Teaching</a><a href="#skills">Skills</a>
+    </nav>
+    <section class="resume-section" id="research">
+      <h2>Research interests</h2>
+      <ul class="interest-list"><li>Robot Learning</li><li>Vision-Language-Action Models</li><li>Robust Robotic Manipulation</li><li>Embodied AI</li><li>Memory-Augmented Policies</li><li>3D Spatial Reasoning</li></ul>
+    </section>
+    <section class="resume-section" id="experience">
+      <h2>Research experience</h2>
+      <article class="entry">
+        <div class="entry-heading"><h3>DynaInterfere-Bench: Robotic Manipulation under Dynamic Interference</h3><span class="entry-date">2026–Present</span></div>
+        <p class="entry-subtitle">Research collaboration with Dr. Kaichen Zhou (Massachusetts Institute of Technology) and Prof. Fangneng Zhan (Hong Kong University of Science and Technology)</p><p class="entry-summary">Controlled benchmarking of vision-language-action (VLA) policies, baseline evaluation, and training-free recovery under dynamic interference.</p>
+        <ul><li>Co-developed an Isaac Sim / Isaac Lab benchmark with six YAM Ultra2 manipulation tasks, randomized layouts, collision-aware expert planning, and configurable visual occlusion and periodic or reactive obstacles.</li><li>Contributed to 2,000 successful demonstrations (800 xArm5; 1,200 Ultra2), including dual-camera capture, image–state–action synchronization checks, separate train/test seeds, and LeRobot exports.</li><li>Integrated π0.5 and X-VLA action adapters; contributed to four-epoch, full-parameter X-VLA fine-tuning on four RTX 5090 GPUs, including checkpoint validation and recovery.</li><li>Evaluated fine-tuned π0.5 and X-VLA in 400 seed-matched xArm5 trials per model. Baseline success was 83.75% and 99.75%, respectively, under a shared 90-second task-and-return-home protocol.</li><li>Integrated Astra and Sol into an RGB-based robot control pipeline with structured Cartesian and gripper commands, inverse kinematics, and execution feedback. Validated bounded motion with Astra and exploratory mug pick-and-place with Sol without task-specific fine-tuning.</li><li>Prototyped a model-agnostic, training-free runtime adapter for risk monitoring, braking, avoidance, and trajectory rejoining, with an initial 12-pair on/off study (24 rollouts). Exploring temporal memory and multi-view 3D context for robustness to occlusion.</li></ul>
+      </article>
+      <article class="entry">
+        <div class="entry-heading"><h3>Halo Copilot / SmartHat</h3><span class="entry-date">Feb 2026–Present</span></div>
+        <p class="entry-subtitle">Graduate Researcher · Creative Machines Lab, Columbia University · Advised by Prof. Hod Lipson</p><p class="entry-summary">A wearable assembly assistant combining RGB-D perception, spatially aligned projection, and multimodal step assessment.</p>
+        <ul><li>Developed a wearable camera–projector system on Jetson Orin Nano with Intel RealSense D435i sensing to provide guidance on physical workspaces.</li><li>Combined 13-class YOLO part detection with Lucas–Kanade optical flow and adaptive detection scheduling for continuous localization during assembly.</li><li>Implemented depth-plane estimation, calibrated camera-to-projector mapping, and confidence-aware rendering to keep projected guidance aligned as viewpoints change.</li><li>Integrated GPT-6.1-sol for multimodal step-completion assessment against an eight-step XML-defined assembly plan; investigating diagnosis of missing or incorrectly installed parts.</li></ul>
+      </article>
+      <article class="entry">
+        <div class="entry-heading"><h3>Training-Free Asynchronous Control for World-Action Models</h3></div>
+        <p class="entry-subtitle">World Assembly</p><p class="entry-summary">Execution-aware inference and asynchronous control for pretrained FastWAM policies.</p>
+        <ul><li>Developed training-free asynchronous control extensions combining continuous policy inference, execution-progress-aware action alignment, and hold-aware action stitching.</li><li>Implemented multiprocess simulation and inference backends with dedicated GPU allocation, Pipe-based interprocess communication, reduced observation payloads, and per-stage latency profiling.</li><li>Conducted RoboTwin baseline and ablation evaluations across 12 manipulation tasks, with 30 rollouts per method (720 total evaluation rollouts).</li></ul>
+      </article>
+    </section>
+    <section class="resume-section" id="projects">
+      <h2>Selected robotics projects</h2>
+      <article class="entry">
+        <div class="entry-heading"><h3>8-DOF Quadruped Robot</h3></div>
+        <p class="entry-subtitle">Columbia University · Robotics Studio</p>
+        <ul><li>Designed and built an 8-DOF quadruped using LX-16A smart servos and Raspberry Pi 4B, integrating mechanical design, inverse kinematics, gait generation, embedded actuation, and physical-robot testing.</li><li>Developed a MuJoCo simulation and trained locomotion policies with PPO; compared learned control with manually designed gaits and investigated practical sim-to-real transfer issues.</li></ul>
+      </article>
+      <article class="entry">
+        <div class="entry-heading"><h3>Vision-Based Mobile Robot</h3><span class="entry-date">2025</span></div>
+        <p class="entry-subtitle">MakeCU Hackathon · Columbia University</p><p class="entry-award">Award: Best Use of Computer Vision</p>
+        <ul><li>Built a two-wheel mobile robot with real-time vision-based target tracking during the MakeCU hackathon.</li></ul>
+      </article>
+    </section>
+    <section class="resume-section" id="education">
+      <h2>Education</h2>
+      <article class="entry">
+        <div class="entry-heading"><h3>Columbia University</h3><span class="entry-date">Sep 2025–May 2027 (expected)</span></div>
+        <p class="entry-subtitle">M.S. in Mechanical Engineering · Robotics &amp; Control</p>
+        <p class="entry-location">New York, NY</p>
+        <p class="entry-details">Selected coursework: Reinforcement Learning; Model Predictive Control; Robotics Studio (A+).</p>
+      </article>
+      <article class="entry">
+        <div class="entry-heading"><h3>Wuhan University of Science and Technology</h3><span class="entry-date">Jun 2024</span></div>
+        <p class="entry-subtitle">B.Eng. in Traffic Engineering</p>
+        <p class="entry-location">Wuhan, China</p>
+        
+      </article>
+    </section>
+    <section class="resume-section" id="teaching">
+      <h2>Teaching experience</h2>
+      <article class="entry">
+        <div class="entry-heading"><h3>Teaching Assistant · MECE 4611 Robotics Studio</h3><span class="entry-date">Fall 2026</span></div>
+        <p class="entry-subtitle">Columbia University</p>
+        <ul><li>Mentor student teams on robot hardware integration, servo systems, Raspberry Pi-based control, mechanical design, and system debugging; hold weekly office hours and support project evaluation.</li></ul>
+      </article>
+    </section>
+    <section class="resume-section" id="skills">
+      <h2>Technical skills</h2>
+      <dl class="skills-list"><div><dt>Programming</dt><dd>Python; Git; Linux; Bash; NumPy</dd></div><div><dt>Robot learning &amp; simulation</dt><dd>PyTorch; Isaac Sim; Isaac Lab; ManiSkill3; MuJoCo; reinforcement learning; PPO; OpenPI; LeRobot</dd></div><div><dt>Perception</dt><dd>OpenCV; YOLO; RGB-D perception; optical flow; ArUco; camera calibration; RANSAC</dd></div><div><dt>Robotics &amp; hardware</dt><dd>Jetson Orin Nano; Raspberry Pi; Intel RealSense; smart-servo systems</dd></div><div><dt>Mechanical design</dt><dd>SolidWorks; Fusion 360; CAD and rapid prototyping</dd></div></dl>
+    </section>
+    <footer class="page-footer"><span>Xuge Guo · Columbia University</span><a href="#content">Back to top ↑</a></footer>
+  </main>
+</body>
+</html>
